@@ -1,0 +1,11 @@
+[paths]
+source = src
+
+[run]
+branch = true
+source = testcontainers_orm
+parallel = true
+
+[report]
+show_missing = true
+precision = 2
