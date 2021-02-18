@@ -9,9 +9,9 @@ from testcontainers.redis import RedisContainer  # type: ignore
 
 from testcontainers_orm.config import RedisConfig
 
-redis_container: Optional[
+redis_container: Optional[  # pylint: disable=unsubscriptable-object
     RedisContainer
-] = None  # pylint: disable=unsubscriptable-object
+] = None
 
 
 # NOTE: This class left private intentionally. Otherwise it will be discovered by nosetests.

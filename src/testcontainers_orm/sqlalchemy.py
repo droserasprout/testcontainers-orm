@@ -47,7 +47,7 @@ class EngineFactory(Generic[TStorage]):
         if config.driver == 'mysql':
             config.driver = 'mysql+pymysql'
         self._config: DatabaseConfig = config
-        self._engine: Optional[Engine] = None
+        self._engine: Optional[Engine] = None  # pylint: disable=unsubscriptable-object
 
     def _create_engine(self) -> Engine:
         connection_string = self._config.connection_string
